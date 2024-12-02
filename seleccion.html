@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Helados</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f7f7;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .form-container {
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+
+    .cart-container {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .cart-button {
+      background-color: #007bff;
+    }
+
+    .cart-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      select, button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Formulario de Pedido de Helado</h1>
+  <div class="form-container">
+    <form id="order-form">
+      <div class="form-group">
+        <label for="size">Elige el tamaño del helado:</label>
+        <select id="size" name="size" required>
+          <option value="1/4 kg">1/4 kg</option>
+          <option value="1/2 kg">1/2 kg</option>
+          <option value="1 kg">1 kg</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="flavor1">Sabor 1:</label>
+        <select id="flavor1" name="flavor1" required>
+          <option value="Ananá">Ananá</option>
+          <option value="Limón">Limón</option>
+          <option value="Chocolate con almendras">Chocolate con almendras</option>
+          <option value="Chocolate">Chocolate</option>
+          <option value="Dulce de leche">Dulce de leche</option>
+          <option value="Dulce de leche Granizado">Dulce de leche Granizado</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="flavor2">Sabor 2:</label>
+        <select id="flavor2" name="flavor2" required>
+          <option value="Ananá">Ananá</option>
+          <option value="Limón">Limón</option>
+          <option value="Chocolate con almendras">Chocolate con almendras</option>
+          <option value="Chocolate">Chocolate</option>
+          <option value="Dulce de leche">Dulce de leche</option>
+          <option value="Dulce de leche Granizado">Dulce de leche Granizado</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="flavor3">Sabor 3:</label>
+        <select id="flavor3" name="flavor3" required>
+          <option value="Ananá">Ananá</option>
+          <option value="Limón">Limón</option>
+          <option value="Chocolate con almendras">Chocolate con almendras</option>
+          <option value="Chocolate">Chocolate</option>
+          <option value="Dulce de leche">Dulce de leche</option>
+          <option value="Dulce de leche Granizado">Dulce de leche Granizado</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="flavor4">Sabor 4:</label>
+        <select id="flavor4" name="flavor4">
+          <option value="Ananá">Ananá</option>
+          <option value="Limón">Limón</option>
+          <option value="Chocolate con almendras">Chocolate con almendras</option>
+          <option value="Chocolate">Chocolate</option>
+          <option value="Dulce de leche">Dulce de leche</option>
+          <option value="Dulce de leche Granizado">Dulce de leche Granizado</option>
+        </select>
+      </div>
+
+      <button type="submit">Agregar al carrito</button>
+    </form>
+  </div>
+
+  <div class="cart-container">
+    <button class="cart-button" id="view-cart">Ver carrito</button>
+  </div>
+</div>
+
+<script>
+  // Capturar el evento de envío del formulario
+  document.getElementById('order-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('¡Helado agregado al carrito!');
+
+    // Aquí podrías agregar código para agregar el producto al carrito
+    // Esto depende de cómo manejes el carrito en tu tienda, por ejemplo, haciendo un fetch a la API de Empretienda
+  });
+
+  // Acción para ver el carrito (simulada)
+  document.getElementById('view-cart').addEventListener('click', function() {
+    alert('Carrito vacío (simulación).');
+  });
+</script>
+
+</body>
+</html>
